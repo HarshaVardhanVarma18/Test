@@ -1,0 +1,16 @@
+package streams;
+import java.util.*;
+public class main {
+	public static void main(String[] args) {
+		List<String> input = Arrays.asList("alex","is","from","newyork","usa","hello");
+		List<String> result = new ArrayList<>();
+		for (int i = 0; i < input.size(); i++) {
+            String word = input.get(i);
+            if (word.length() >= 4) {
+                result.add(word.toUpperCase());
+            }
+        }
+        Collections.sort(result);
+        System.out.println(result);
+	}
+}
