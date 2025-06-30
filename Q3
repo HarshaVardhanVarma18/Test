@@ -1,0 +1,39 @@
+package oops;
+
+class student {
+    String name;
+    int rollno;
+    int marks;
+    student(String name, int rollno, int marks) {
+        this.name = name;
+        this.rollno = rollno;
+        this.marks = marks;
+    }
+    public String getgrade() {
+        if (marks >= 90) {
+            return "A";
+        } else if (marks >= 75) {
+            return "B";
+        } else if (marks >= 60) {
+            return "C";
+        } else {
+            return "D";
+        }
+    }
+}
+public class main {
+    public static void main(String[] args) {
+        student s1 = new student("Harsha", 17, 55);
+        student s2 = new student("Vardhan", 18, 75);
+        student s3 = new student("Varma", 8, 94);
+        StudentDetails(s1);
+        StudentDetails(s2);
+        StudentDetails(s3);
+    }
+    public static void StudentDetails(student s) {
+        System.out.println("Name: " + s.name);
+        System.out.println("Marks: " + s.marks);
+        System.out.println("Grade: " + s.getgrade());
+        System.out.println();
+    }
+}
